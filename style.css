@@ -1,0 +1,97 @@
+/*sayfanın arka planı ve fontu*/
+body{
+    font-family: 'Segoe UI','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e2bedf;
+    margin: 0;
+    padding: 20px;
+    display: block;/* Flex'i body'den kaldırıyoruz */
+}
+
+.main-wrapper{
+    display: flex;
+    flex-wrap: wrap;/* Kutular sığmayınca alt satıra geçer */
+    gap: 20px;
+    justify-content: center;/* Ortalar */
+}
+
+/*ana kutunun tasarımı*/
+.container{
+    background: rgb(129, 80, 126);
+    padding: 20px;/*etiketlerin kenarlarının iç boşluklarını düzenler*/
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1)/*hafif gölge efekti*/;
+    width: 300px;/*her bir kutunun sabit genişliği*/
+    min-height: 400px;
+    border-radius: 15px;
+}
+
+h2{
+    text-align: center;
+    color: #040000;
+}
+
+/*giriş kutusu ve butonun yan yana durma ayarı*/
+.input-area{
+    display: flex;
+    gap: 10px;/*aralarındaki boşluk*/
+    margin-bottom: 20px;/*asagıdan bosluk bırakma*/
+}
+
+/*yazı yazma kutusunun tasarımı*/
+input[type="text"]{
+    flex: 1;/*kutunun kalan boslugu kaplamasını saglar*/
+    padding: 10px;
+    border: 3px solid #9e047d;/*bir etiketin çerçevesinin stilini genişliğini ve rengini belirler*/
+    border-radius: 6px;/*köşelere ait ovalliğini ayarlar*/
+    outline: none;/*tıklayınca cıkan mavi cizgiyi kaldırır*/
+}
+
+/*ekle butonunun tasarımı*/
+button{
+    padding: 10px 20 px;
+    background-color: #5d033b;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;/*uzerine gelince koyulasmasını saglar*/
+    transition: 0.3s;/*renk geçişini yumuşatır*/
+}
+
+button:hover{
+    background-color: #2e0121;/*buton üzerine gelindiginde koyulasır*/
+}
+
+/*listenin temel ayarları*/
+ul{
+    list-style-type: none;/*liste öğesi işaretleyicilerini kaldırır*/
+    padding: 0;
+}
+
+/*her görev maddesinin tasarımı*/
+li{
+    background: #fff;
+    border-bottom: 1px solid #e314a5;/*alt kenarlığının görünümünü belirler*/
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;/*yazıyı sola,sil butonunu sağa koyar*/
+    align-items: center;
+}
+
+/*tamamlanan görevlerin üzerine çizgi çekmek için (JS ile eklenecek)*/
+.checked{
+    text-decoration: line-through;/*yazının neresinde cizgi olacagı belirlenir-underline olursa yazının altı çizgili olur*/
+    color: #888;
+}
+
+/*silme butonunun stili*/
+.close{
+    cursor: pointer;/*imleci bir ele dönüştürür ve verilen öğenin tıklanabilir olduğu sezgisini verir*/
+    padding: 5px 10px;
+    color: #180115;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.close:hover{
+    background-color: #ffe5e5;
+    border-radius: 50%;
+}
